@@ -1,0 +1,13 @@
+{
+  "name": "syahmi-pod",
+  "version": "1.0.0",
+  "private": true,
+  "description": "syahmi aof — Interactive Canvas Video Scrubbing Experience",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/_next/image",
+      "has": [
+        {
+          "type": "query",
+          "key": "url",
+          "value": "(?<url>.*)"
+        }
+      ],
+      "destination": "/:url"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
