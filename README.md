@@ -40,7 +40,6 @@
   - **Emergence Stage (Canvas 1)**: 274 WebP frames orchestrated via GSAP ScrollTrigger timeline interpolation with custom ease dampening.
   - **Turntable Stage (Canvas 2)**: 194 interactive rotation frames maintaining continuous rotational velocity and memory-efficient bitmap disposal.
 - **Kinetic Layout Coordination**: Responsive pinning and scrubbed camera motion synchronized with Next.js static asset pipelines.
-- **Technical Analysis**: For mathematical formulas, frame budgets, and bundle performance metrics, see **[BEDAH_TEKNIKAL.md](BEDAH_TEKNIKAL.md)**.
 
 ---
 
