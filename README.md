@@ -1,41 +1,58 @@
-# syahmi aof — Interactive Canvas Web Experience
-
-Projek ini merupakan pembinaan semula (*reverse-engineered production experience*) berinspirasikan teknologi visual interaktif moden, dijenamakan semula untuk identiti peribadi **syahmi aof**.
-
-🌐 **Live URL:** [https://pod.syahmiaof.my](https://pod.syahmiaof.my)  
-⚡ **Mirror URL:** [https://syahmi-pod.vercel.app](https://syahmi-pod.vercel.app)  
-👤 **Portfolio:** [https://syahmiaof.my](https://syahmiaof.my)  
-🐙 **GitHub:** [https://github.com/syahmiaof](https://github.com/syahmiaof)
-
----
-
-## 🚀 Ciri Utama
-
-* **Dual-Engine Canvas Animation:**
-  * **Canvas 1 (Pod Emerges):** 274 bingkai jujukan WebP diselaraskan dengan GSAP ScrollTrigger (2200×1120).
-  * **Canvas 2 (360° Rotation):** 194 bingkai putaran produk 3D interaktif yang lancar mengikut skrol pengguna.
-* **GSAP ScrollTrigger & Kinetic Typography:** Morfologi kapsul ke skrin penuh, pinning, dan animasi SplitText karakter demi karakter.
-* **Production Rebrand:** Penjenamaan penuh ke identiti syahmi aof tanpa memecahkan hidrasi Next.js SSG.
-* **Zero Runtime Overhead:** Disediakan sebagai static deployment berprestasi tinggi di Vercel dengan Cloudflare DNS.
+<div align="center">
+  <h1>syahmi-pod</h1>
+  <p><strong>syahmi aof — Interactive Dual-Canvas Product Animation & Scrollytelling Experience</strong></p>
+  <p>
+    <a href="https://pod.syahmiaof.my"><img src="https://img.shields.io/badge/Demo-Live-60E1B5?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="Demo"></a>
+    <a href="https://github.com/syahmiaof/syahmi-pod"><img src="https://img.shields.io/badge/Source-GitHub-60E1B5?style=for-the-badge&logo=github&logoColor=60E1B5&labelColor=101713" alt="GitHub"></a>
+    <a href="https://github.com/syahmiaof/syahmi-pod/actions"><img src="https://img.shields.io/badge/CI-Passing-60E1B5?style=for-the-badge&logo=githubactions&logoColor=60E1B5&labelColor=101713" alt="CI"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-All_Rights_Reserved-60E1B5?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="License"></a>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/GSAP-ScrollTrigger-101713?style=for-the-badge&logo=greensock&logoColor=60E1B5" alt="GSAP ScrollTrigger">
+    <img src="https://img.shields.io/badge/HTML5-Canvas%202D-101713?style=for-the-badge&logo=html5&logoColor=60E1B5" alt="HTML5 Canvas 2D">
+    <img src="https://img.shields.io/badge/WebP-Sequence-101713?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="WebP Sequence">
+    <img src="https://img.shields.io/badge/Next.js-Static%20Export-101713?style=for-the-badge&logo=nextdotjs&logoColor=60E1B5" alt="Next.js">
+  </p>
+</div>
 
 ---
 
-## 🛠️ Cara Menjalankan Secara Lokal
-
-```bash
-# Clone repo
-git clone https://github.com/syahmiaof/syahmi-pod.git
-cd syahmi-pod
-
-# Pasang dependency & jalankan server lokal
-npm install
-npm run dev
-```
-
-Buka pelayar di **`http://127.0.0.1:4182`**.
+<div align="center">
+  <img src="public/og-preview.jpg" alt="syahmi aof Interactive Canvas Experience Preview" width="100%">
+</div>
 
 ---
 
-## 📜 Dokumentasi & Arkitektur
+## 🎧 Overview & Visual Engineering
 
-Sila rujuk `BEDAH_TEKNIKAL.md` untuk perincian seni bina teknikal, saluran frame canvas, formula GSAP scrub, dan analisis bundle.
+**syahmi-pod** (`pod.syahmiaof.my`) is a high-performance interactive scrollytelling web application engineered by Muhammad Syahmi. It harnesses a synchronized dual-canvas rendering architecture to present photorealistic hardware product reveals and continuous 360-degree rotation scrubbed directly by the user's scroll position.
+
+### Key Value Pillars:
+- **Functionality**: Scrub-driven dual-engine canvas system providing seamless transitions between cinematic emergence (274 high-resolution 2200×1120 WebP frames) and interactive 360° product rotation (194 turntable frames) without layout jumps or dropped frames.
+- **Aesthetic Excellence**: Organic capsule-to-fullscreen morphing, precision kinetic typography reveals with character-level SplitText animations, and a rich, atmospheric dark palette.
+- **Business Impact**: Provides luxury hardware and consumer tech brands with an immersive product showcase that outperforms conventional video embeds through responsive, user-directed pacing.
+
+---
+
+## ⚙️ Architecture & Animation Mechanics
+
+- **Dual-Engine Canvas Architecture**:
+  - **Emergence Stage (Canvas 1)**: 274 WebP frames orchestrated via GSAP ScrollTrigger timeline interpolation with custom ease dampening.
+  - **Turntable Stage (Canvas 2)**: 194 interactive rotation frames maintaining continuous rotational velocity and memory-efficient bitmap disposal.
+- **Kinetic Layout Coordination**: Responsive pinning and scrubbed camera motion synchronized with Next.js static asset pipelines.
+- **Technical Analysis**: For mathematical formulas, frame budgets, and bundle performance metrics, see **[BEDAH_TEKNIKAL.md](BEDAH_TEKNIKAL.md)**.
+
+---
+
+## 🚀 Live Production & Infrastructure
+
+- **Live Production URL**: [https://pod.syahmiaof.my](https://pod.syahmiaof.my)
+- **Deployment Platform**: Vercel Global Edge Network with Cloudflare DNS
+- **Continuous Validation**: Automated GitHub Actions CI workflow executing syntax and build integrity checks on every commit.
+
+---
+
+## 📄 License & Intellectual Property
+
+Proprietary Software. Copyright &copy; 2026 Muhammad Syahmi (`syahmiaof`). All rights reserved.  
+Created solely for demonstration and portfolio showcase purposes. See [LICENSE](LICENSE) for details.
