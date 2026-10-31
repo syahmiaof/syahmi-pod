@@ -29,6 +29,7 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
+  // CORS & Security headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS, HEAD');
   res.setHeader('Access-Control-Allow-Headers', '*');
@@ -42,9 +43,10 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
   let pathname = parsedUrl.pathname;
 
+  // Intercept Next.js Image Optimization route: /_next/image?url=...
   if (pathname === '/_next/image' && parsedUrl.query && parsedUrl.query.url) {
     let sourceImgUrl = decodeURIComponent(parsedUrl.query.url);
-    sourceImgUrl = sourceImgUrl.split('?')[0];
+    sourceImgUrl = sourceImgUrl.split('?')[0]; // clean inner query if any
     let targetFile = path.join(PUBLIC_DIR, sourceImgUrl.replace(/\//g, path.sep));
     
     if (fs.existsSync(targetFile) && fs.statSync(targetFile).isFile()) {
@@ -59,16 +61,20 @@ const server = http.createServer((req, res) => {
     }
   }
 
+  // Sanitize path
   let safePath = path.normalize(decodeURIComponent(pathname)).replace(/^(\.\.[\/\\])+/, '');
   if (safePath === '/' || safePath === '\\') safePath = '/index.html';
 
   let filePath = path.join(PUBLIC_DIR, safePath);
 
+  // If path doesn't exist, check inside root or fallback to index.html
   if (!fs.existsSync(filePath)) {
+    // Check root
     const rootPath = path.join(__dirname, safePath);
     if (fs.existsSync(rootPath) && fs.statSync(rootPath).isFile()) {
       filePath = rootPath;
     } else {
+      // Check if it's an html page route, fallback to index.html
       filePath = path.join(PUBLIC_DIR, 'index.html');
       if (!fs.existsSync(filePath)) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });

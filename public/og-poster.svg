@@ -1,0 +1,90 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050505;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a12;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid -->
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Left accent line -->
+  <rect x="60" y="80" width="2" height="470" fill="url(#accentGrad)" filter="url(#glow)" opacity="0.9"/>
+  
+  <!-- Top subtle glow orb -->
+  <ellipse cx="600" cy="-50" rx="400" ry="200" fill="#00d4ff" opacity="0.03"/>
+  
+  <!-- Bottom line separator -->
+  <line x1="90" y1="520" x2="1110" y2="520" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Main title: syahmi aof -->
+  <text 
+    x="120" 
+    y="290" 
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" 
+    font-size="96" 
+    font-weight="700" 
+    fill="#ffffff"
+    letter-spacing="-2"
+    filter="url(#textGlow)"
+    opacity="0.97">syahmi aof</text>
+
+  <!-- Subtitle -->
+  <text 
+    x="122" 
+    y="360" 
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" 
+    font-size="24" 
+    font-weight="300"
+    fill="#8892a4"
+    letter-spacing="1">crafts interactive digital experiences to push the web forward</text>
+
+  <!-- Blue accent dot before title -->
+  <circle cx="90" cy="275" r="4" fill="#00d4ff" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- URL -->
+  <text 
+    x="122" 
+    y="558" 
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" 
+    font-size="18" 
+    font-weight="400"
+    fill="#00d4ff"
+    opacity="0.7"
+    letter-spacing="2">pod.syahmiaof.my</text>
+
+  <!-- Corner decoration -->
+  <line x1="1080" y1="60" x2="1140" y2="60" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <line x1="1140" y1="60" x2="1140" y2="120" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Bottom left decoration -->
+  <line x1="60" y1="570" x2="120" y2="570" stroke="#7c3aed" stroke-width="1" opacity="0.3"/>
+  <line x1="60" y1="570" x2="60" y2="510" stroke="#7c3aed" stroke-width="1" opacity="0.3"/>
+</svg>

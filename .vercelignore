@@ -1,0 +1,7 @@
+archive/
+scripts/
+node_modules/
+.git/
+test_e2e.js
+BEDAH_TEKNIKAL.md
+server.js
